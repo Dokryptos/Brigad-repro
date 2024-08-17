@@ -1,30 +1,37 @@
-import { Image, StyleSheet, Platform, Text, View } from 'react-native';
+import { MissionItem } from '@/utils/types/MissionItem';
+import { useEffect, useState } from 'react';
+import { Image, StyleSheet, Platform, Text, View, FlatList } from 'react-native';
 
 
 export default function MissionScreen() {
+
+  const [listMission, setListMission] = useState<MissionItem[]>([])
+  useEffect(() => {
+    async function fetchMissionFeed() {
+      
+    }
+  })
+
   return (
     <View style={styles.titleContainer}>
-        <Text>Mission</Text>
+        <Text style={styles.title}>Mission</Text>
+        {/* <FlatList data={} /> */}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
     titleContainer: {
-      flexDirection: 'row',
+      flex: 1,
       alignItems: 'center',
-      gap: 8,
+      justifyContent: 'center'
+    },
+    title:{
+      fontSize: 20,
     },
     stepContainer: {
       gap: 8,
       marginBottom: 8,
-    },
-    reactLogo: {
-      height: 178,
-      width: 290,
-      bottom: 0,
-      left: 0,
-      position: 'absolute',
     },
   });
   
