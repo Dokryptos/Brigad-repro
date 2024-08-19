@@ -9,7 +9,7 @@ import Loading from '../screens/utils/Loading';
 
 // Better put your these secret keys in .env file
 const firebaseConfig = {
-	apiKey: '',
+	apiKey: process.env.SUPABASE_KEY,
 	authDomain: '',
 	databaseURL: '',
 	projectId: '',
